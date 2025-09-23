@@ -1,0 +1,29 @@
+.gallery-container {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.gallery-item {
+    margin-bottom: 5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1.5rem;
+}
+
+.gallery-item img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 2rem auto;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.cuestionario {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}

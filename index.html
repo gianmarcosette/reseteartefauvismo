@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resetearte - Fauvismo</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/header-footer-animation.css">
+    <link rel="stylesheet" href="https://use.typekit.net/puj5ope.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/la-danza-matisse.webp" alt="Logo Resetearte">
+                <span>RESETEARTE</span>
+            </a>
+        </div>
+        <nav class="nav">
+            <button class="nav-toggle" aria-label="Abrir menú">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-menu-item has-submenu">
+                    <a href="#" class="nav-menu-link">¿Cómo te sentís?</a>
+                    <ul class="submenu">
+                        <li class="submenu-item"><a href="feliz.html" class="submenu-link">Feliz</a></li>
+                        <li class="submenu-item"><a href="ansioso.html" class="submenu-link">Ansioso</a></li>
+                        <li class="submenu-item"><a href="triste.html" class="submenu-link">Triste</a></li>
+                        <li class="submenu-item"><a href="ilusionado.html" class="submenu-link">Ilusionado</a></li>
+                        <li class="submenu-item"><a href="tranquilo.html" class="submenu-link">Tranquilo</a></li>
+                    </ul>
+                </li>
+                <li class="nav-menu-item"><a href="no-lo-se.html" class="nav-menu-link">No lo sé</a></li>
+                <li class="nav-menu-item has-submenu">
+                    <a href="#" class="nav-menu-link">Información</a>
+                    <ul class="submenu">
+                        <li class="submenu-item"><a href="informacion.html#porque" class="submenu-link">¿Por qué?</a></li>
+                        <li class="submenu-item"><a href="informacion.html#contacto" class="submenu-link">Contacto</a></li>
+                        <li class="submenu-item"><a href="informacion.html#newsletter" class="submenu-link">Newsletter</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="intro">
+            <p>La filosofía del fauvismo se fundamenta en la libertad creativa y la expresión subjetiva a través del color. Este movimiento rechazó las normas tradicionales de representación, privilegiando en su lugar la espontaneidad, la intuición y la emoción directa. El color se convirtió en un recurso autónomo, capaz de transmitir estados de ánimo y sensaciones intensas.</p>
+            <p>Los fauvistas entendían la pintura como un medio para expresar vitalidad y gozo, más que para reflejar fielmente la realidad. Esta concepción, vinculada a las ideas vitalistas de Bergson sobre la intuición y la experiencia inmediata, otorgaba al arte un carácter liberador y profundamente subjetivo.</p>
+            <p>De esta forma, el fauvismo se consolidó como un elogio a la emoción, el instinto y la libertad del artista, dejando una huella decisiva en la evolución de la pintura moderna.</p>
+            <p>Es por eso que hoy te quiero preguntar:</p>
+        </section>
+
+        <section class="cta-section">
+            <div class="cta-question">
+                <h2>¿Cómo te sentís?</h2>
+            </div>
+            <div class="cta-buttons">
+
+                <div class="cta-wrapper">
+                    <div class="cta-button" id="btn-elegir-emocion" role="button" tabindex="0">
+                        <div class="cta-button-img-placeholder btn-emocion-bg"></div>
+                        <span>Elegir emoción</span>
+                    </div>
+                    <div class="sub-buttons" id="sub-emocion">
+                        <a href="feliz.html">Feliz</a>
+                        <a href="ansioso.html">Ansioso</a>
+                        <a href="triste.html">Triste</a>
+                        <a href="ilusionado.html">Ilusionado</a>
+                        <a href="tranquilo.html">Tranquilo</a>
+                    </div>
+                </div>
+
+                <div class="cta-wrapper">
+                    <div class="cta-button" id="btn-no-lo-se" role="button" tabindex="0">
+                        <div class="cta-button-img-placeholder btn-no-lo-se-bg"></div>
+                        <span>No lo sé</span>
+                    </div>
+                </div>
+
+                <div class="cta-wrapper">
+                    <div class="cta-button" id="btn-por-que" role="button" tabindex="0">
+                        <div class="cta-button-img-placeholder btn-por-que-bg"></div>
+                        <span>¿Por qué?</span>
+                    </div>
+                    <div class="sub-buttons" id="sub-por-que">
+                        <a href="informacion.html#porque">¿Por Qué?</a>
+                        <a href="informacion.html#contacto">Contacto</a>
+                        <a href="informacion.html#newsletter">Newsletter</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="galeria-section" class="galeria-container hidden">
+            <h3>Galería de Obras</h3>
+            <p>Observa cada obra y responde la pregunta. Al finalizar, te diremos qué emoción predominó.</p>
+            
+            <!-- Ejemplo de un item de la galería -->
+            <div class="galeria-item">
+                <div class="galeria-img-placeholder"></div>
+                <p>Párrafo de contenido sobre esta obra de arte.</p>
+                <form class="cuestionario">
+                    <p class="cuestionario-pregunta">¿A qué emoción te llevó el ver esta obra?</p>
+                    <div class="cuestionario-opciones">
+                        <label><input type="radio" name="emocion1" value="feliz"> Feliz</label>
+                        <label><input type="radio" name="emocion1" value="ansioso"> Ansioso</label>
+                        <label><input type="radio" name="emocion1" value="triste"> Triste</label>
+                        <label><input type="radio" name="emocion1" value="ilusionado"> Ilusionado</label>
+                        <label><input type="radio" name="emocion1" value="tranquilo"> Tranquilo</label>
+                    </div>
+                </form>
+            </div>
+
+            <div class="galeria-item">
+                <div class="galeria-img-placeholder"></div>
+                <p>Párrafo de contenido sobre esta otra obra de arte.</p>
+                <form class="cuestionario">
+                    <p class="cuestionario-pregunta">¿A qué emoción te llevó el ver esta obra?</p>
+                    <div class="cuestionario-opciones">
+                        <label><input type="radio" name="emocion2" value="feliz"> Feliz</label>
+                        <label><input type="radio" name="emocion2" value="ansioso"> Ansioso</label>
+                        <label><input type="radio" name="emocion2" value="triste"> Triste</label>
+                        <label><input type="radio" name="emocion2" value="ilusionado"> Ilusionado</label>
+                        <label><input type="radio" name="emocion2" value="tranquilo"> Tranquilo</label>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Aquí se repetirían los 13 items restantes de la galería -->
+            <p><i>(13 items más de la galería irían aquí)</i></p>
+
+            <button id="finalizar-cuestionario" class="btn-primario">Finalizar Cuestionario</button>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-legal">
+            <p>&copy; 2025 Resetearte. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-social">
+            <a href="https://substack.com/home">Substack</a>
+            <a href="https://www.youtube.com">Youtube</a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

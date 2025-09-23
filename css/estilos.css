@@ -1,0 +1,414 @@
+/* Reseteo básico y fuentes */
+:root {
+    --primary-color: #FDEBC3;
+    --secondary-color: #191923;
+    --accent-color: #FE9096;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "tt-commons-pro", sans-serif;
+    line-height: 1.6;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+h1, h2, h3, h4, h5, h6, .logo a {
+    font-family: "tt-commons-pro", sans-serif;
+    font-weight: 700; /* Assuming 700 is a bold weight available in the Typekit font */
+}
+
+.nav-menu-item a, .cta-button span, .cuestionario-pregunta, .footer-social a, .footer-legal p, .intro p, .column-left p, .column-right p, .submenu-item a {
+    font-family: "tt-commons-pro", sans-serif;
+    font-weight: 400; /* Assuming 400 is a regular weight available in the Typekit font */
+}
+
+/* Botones Generales */
+.btn-primario {
+    background-color: var(--accent-color);
+    color: #191923;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.btn-primario:hover {
+    opacity: 0.9;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #191923;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo a img {
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+.logo a span {
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+
+/* Navegación */
+.nav-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    position: relative;
+}
+
+.hamburger::before, .hamburger::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    bottom: -8px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-menu-item a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    position: relative;
+}
+
+/* Submenú */
+.has-submenu > a::after {
+    content: ' ▼';
+    font-size: 0.7rem;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: var(--secondary-color);
+    list-style: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.has-submenu:hover .submenu {
+    display: block;
+}
+
+.submenu-item a {
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+.submenu-item a:hover {
+    background-color: var(--accent-color);
+}
+
+/* Contenido Principal */
+.main-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.intro p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.cta-section {
+    margin-top: 3rem;
+}
+
+.cta-question h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.cta-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-button {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cta-button-img-placeholder {
+    width: 120px;
+    height: 120px;
+    background-color: #ccc;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-emocion-bg {
+    background-image: url('../img/matisse-enfermo.jpg');
+}
+
+.btn-no-lo-se-bg {
+    background-image: url('../img/derain-en-museo.jpg');
+}
+
+.btn-por-que-bg {
+    background-image: url('../img/retrato-de-matisse-por-derain.webp');
+}
+
+.cta-button:hover .cta-button-img-placeholder, .cta-button.active .cta-button-img-placeholder {
+    transform: scale(1.1);
+    background-color: var(--accent-color);
+}
+
+.cta-button span {
+    font-weight: bold;
+}
+
+/* Sub-botones de CTA */
+.sub-buttons {
+    display: none; /* Ocultos por defecto */
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--accent-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.sub-buttons.active {
+    display: flex; /* Se muestran con JS */
+}
+
+.sub-buttons a {
+    text-decoration: none;
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.sub-buttons a:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Sección Galería */
+.galeria-container {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    border-top: 1px solid #ddd;
+}
+
+.galeria-container.hidden {
+    display: none;
+}
+
+.galeria-item {
+    margin-bottom: 5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1.5rem;
+}
+
+.galeria-img-placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.cuestionario-pregunta {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.cuestionario-opciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.cuestionario-opciones label {
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--secondary-color);
+    margin-top: 3rem;
+    border-top: 1px solid #eee;
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: var(--primary-color);
+    margin-left: 1rem;
+}
+
+/* No Lo Sé Page */
+.main-content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 980px;
+    margin: 2rem auto;
+}
+
+.gallery-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.lightbox-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+}
+
+.lightbox-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.lightbox-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.questionnaire-column {
+    padding: 2rem;
+    background-color: #2a2a3a;
+    border-radius: 10px;
+}
+
+
+/* Responsive - Diseño para móviles */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+        z-index: 1001; /* Por encima del menú */
+    }
+    
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70%;
+        height: 100vh;
+        background-color: #fff;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(100%);
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        display: flex;
+        transform: translateX(0);
+    }
+
+    .has-submenu:hover .submenu {
+        display: none;
+    }
+    .has-submenu .submenu {
+        position: static;
+        display: block;
+        background: none;
+        box-shadow: none;
+        padding-left: 1rem;
+        border: none;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
